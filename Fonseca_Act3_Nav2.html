@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation bar</title>
+        <style>
+            body {background-color: rgb(250, 82, 20);}
+            nav ul{
+                list-style-type: none;
+                margin-top: 0;
+                padding: 0;
+                width: 200px;
+                background-color: #1c2329;
+                margin-top: 150px;
+                border-radius: 5px;
+                
+            }
+            nav ul li a{
+                display: block;
+                color: white;
+                padding: 8px 16px;
+                text-decoration: none;
+                
+            }
+            nav ul li a:hover {
+                background-color: rgba(0, 195, 255, 0.877);
+                color: white;
+            }
+            nav ul ul {
+                position: absolute;
+                left: 205px;
+                width: 200px;
+                top: -150px;
+                display: none;
+                background-color: #1c2329;
+                margin-top: 150px;
+                border-radius: 5px;
+                
+            }
+            nav ul .nav1 {
+                position: relative;
+            }
+            nav ul .nav1:hover > ul {
+                display: initial;
+            }
+            nav ul .nav2 ul {
+                position: absolute;
+                left: 205px;
+                top: -150px;
+                
+            }
+            nav ul .nav2:hover ul {
+                display: initial;
+            }
+           
+        
+            
+            
+        </style>
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li class="nav1"><a href="#">PRODUCTS<span>      &rsaquo;</span></a> 
+                <ul>
+                    <li class="nav2"><a href="#">PRODUCT 1<span>      &rsaquo;</span></a>
+                        <ul>
+                            <li><a href="#">SUB PRODUCT</a></li>
+                            <li><a href="#">SUB PRODUCT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PRODUCT 2</a></li>
+                </ul> 
+            </li> 
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    
+
+
+
+
+
+
+    </body>
+</html>

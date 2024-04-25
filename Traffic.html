@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Light</title>
+  <style>
+    .light {
+      width: 200px;
+      height: 200px;
+      margin: 20px; 
+    }
+    body {
+        background-color: bisque;
+    }
+  
+  </style>
+</head>
+<body>
+
+<div>
+
+  <img class="light" src="/webpics/red-light.png" alt="Red">
+  <img class="light" src="/webpics/yellow-light.png" alt="Yellow">
+  <img class="light" src="/webpics/green-light.png" alt="Green">
+</div>
+
+<button onclick="traffic()">CLICK ME!</button>
+
+<script>
+  var clm = 0;
+  var lights = document.querySelectorAll('.light');
+
+  function traffic() {
+    if (clm == 0) {
+      lights[clm].style.display = "none"; 
+      clm = 1;
+      lights[clm].style.display = "block"; 
+    } else if (clm == 1) {
+      lights[clm].style.display = "none";
+      clm = 2;
+      lights[clm].style.display = "block";
+    } else {
+      lights[clm].style.display = "none";
+      clm = 0;
+      lights[clm].style.display = "block";
+    }
+  }
+
+  function trafficAuto() {
+    traffic();
+    setTimeout(trafficAuto, 6000);
+  }
+
+  trafficAuto();
+</script>
+
+</body>
+</html>
